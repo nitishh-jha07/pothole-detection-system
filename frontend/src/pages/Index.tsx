@@ -193,7 +193,20 @@ const Index = () => {
             onViewOnMap={handleViewOnMap}
           />
 
-          <AnalyticsDashboard />
+          <AnalyticsDashboard
+            records={history}
+            onViewOnMap={(lat, lng, id) => {
+              setFocusTarget({
+                latitude: lat,
+                longitude: lng,
+                id,
+              });
+              const mapElement =
+                document.getElementById("dashboard") ||
+                document.getElementById("pothole-map");
+              mapElement?.scrollIntoView({ behavior: "smooth" });
+            }}
+          />
 
           <AlertManagement />
 
