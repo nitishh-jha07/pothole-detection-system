@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Eye, Menu, X } from "lucide-react";
 
-const navLinks = ["Dashboard", "Detection", "Analytics", "Alerts", "About"];
+const navLinks = ["Dashboard", "Detection", "History", "Analytics", "Alerts", "About"];
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
